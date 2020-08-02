@@ -8,7 +8,7 @@ This project uses:
  1. **npm** : npm to manage project
  2. **webpack** : To build project from "src" directory and output in "dist" directory using two webpack config files. 	
 	 1. ** webpack.dev.js** : To build project for during development. To start development environment`npm run start-dev` or to build project in development environment `npm run build-dev`
-	 2. **webpack.prod.js** To build project for deployment. To start `npm start-prod` or to build project in production environment `npm run build-prod`
+	 2. **webpack.prod.js** To build project for deployment.To start `npm start-prod` or to build project in production environment `npm run build-prod`
  3. **express js** : To setup the server using `/src/server/index.js`. Tp start the express server we can use `npm start`
  4. **Jest** : For testing the project javascript files. To start test `npm run test`
  5. **Geonames** : For fetching latitude and longitude

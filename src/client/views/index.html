@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Travel Planner</title>
+  </head>
+  <body>
+    <header>
+      <h1>Plan Your Travel Here</h1>
+    </header>
+    <div class="container">
+      <form onsubmit="return Client.plantrip(event)">
+        <div class="input-container">
+          <div class="input-group">
+            <label for="cityname-input">Travel City</label>
+            <input type="text" id="cityname-input" placeholder="cityname" required>
+          </div>
+          <div class="input-group">
+            <label for="travel-date">Travel Date</label>
+            <input type="date" id="travel-date" placeholder="travel date" required>
+          </div>
+        </div>
+        <input class="submit-button" type="submit" value="Submit" />
+      </form>
+  
+      <div id="trip-plan" class="disabled">
+        <div class="image-container">
+          <img id="cityimage" src="" alt="">
+          <caption>Image provided by pixabay.com</caption>
+          <img id="pixabay-image" src="https://pixabay.com/static/img/logo.svg" alt="pixabay logo">
+        </div>
+        <div class="forecast">
+          <h2>Weather Forecast</h2>
+          <ul>
+            <li>
+              <h3>CityName</h3>
+              <p id="cityname"></p>
+            </li>
+            <li>
+              <h3>Date</h3>
+              <p id="trip-date"></p>
+            </li>
+            <li>
+              <h3>wind direction</h3>
+              <p id="wind-direction"></p>
+            </li>
+            <li>
+              <h3>Highest Temperature</h3>
+              <p id="Highest-Temperature"></p>
+            </li>
+            <li>
+              <h3>Weather Description</h3>
+              <p id="Weather-Description"></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; Sankalp Rai (2020)</p>
+    </footer>
+
+
+
+    <script>
+      //checking if serviceworker is supported by browser
+      if ("serviceWorker" in navigator) {
+          // adding service worker on window load
+          window.addEventListener("load", () =>{
+              navigator.serviceWorker.register("/service-worker.js")
+              console.log("service worker setup is completed!")
+          });
+      }
+    </script>
+  </body>
+</html>
